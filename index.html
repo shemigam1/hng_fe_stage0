@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HNG Profile Card</title>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/78685a7038.js"
+			crossorigin="anonymous"
+		></script>
+		<script defer src="app.js"></script>
+	</head>
+	<body>
+		<!-- 
+        Required Elements
+Each required element must include a data-testid attribute for easy testing.
+Profile Picture
+Add a profile picture.
+Attribute: data-testid="profilePicture"
+Make the image responsive by adjusting either the width or height while maintaining the aspect ratio.
+Full Name
+Display your full name.
+Attribute: data-testid="fullName"
+Job Title
+Display your current job title or desired job title.
+Attribute: data-testid="jobTitle"
+Short Bio
+Include a short bio about yourself (50-100 words).
+Attribute: data-testid="shortBio"
+Current Location
+Display your current city and country.
+Attribute: data-testid="currentLocation"
+Email Address
+Add your professional email address.
+Attribute: data-testid="emailAddress"
+Social Links
+Add links to your professional social profiles (e.g., LinkedIn, GitHub, Twitter).
+Attribute: data-testid="socialLinks"
+Current Time in UTC
+Display the current time in UTC format.
+Attribute: data-testid="currentTimeUTC"
+
+        -->
+		<div class="container">
+			<div class="profile">
+				<div class="image">
+					<img src="assets/profile.png" data-testid="profilePicture" alt="" />
+				</div>
+
+				<div class="data">
+					<p class="name" data-testid="fullName">
+						Oluwasemilore Omotade-Michaels
+					</p>
+					<p class="job" data-testid="jobTitle">Software Engineer</p>
+					<div class="links">
+						<a href="https://x.com/shemigam1" data-testid="socialLinks">
+							<i class="fa-brands fa-x-twitter"></i
+						></a>
+						<a href="https://github.com/shemigam1" data-testid="socialLinks"
+							><i class="fa-brands fa-square-github"></i
+						></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="bio">
+				<div class="location">
+					<span data-testid="currentLocation"
+						><i class="fa-solid fa-location-dot"></i> Lagos, NG</span
+					>
+					<span>
+						<span data-testid="currentTimeUTC"></span>
+						<i class="fa-solid fa-clock"></i
+					></span>
+				</div>
+
+				<div class="">
+					<p data-testid="shortBio">
+						I am a dedicated software developer specializing in frontend
+						development. Passionate about creating visually appealing and
+						intuitive user experiences, I continuously hones my skills and keep
+						up with the latest trends in the industry.
+					</p>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p>
+				contact me @<span class="email" data-testid="emailAddress"
+					>semiloreomotade@gmail.com</span
+				>
+			</p>
+		</footer>
+	</body>
+</html>
