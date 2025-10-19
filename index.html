@@ -1,75 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>HNG Profile Card</title>
-		<link rel="stylesheet" href="reset.css" />
-		<link rel="stylesheet" href="style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
-			rel="stylesheet"
-		/>
-		<script
-			src="https://kit.fontawesome.com/78685a7038.js"
-			crossorigin="anonymous"
-		></script>
-		<script defer src="app.js"></script>
-	</head>
-	<body>
-		<!-- 
-        Required Elements
-Each required element must include a data-testid attribute for easy testing.
-Profile Picture
-Add a profile picture.
-Attribute: data-testid="profilePicture"
-Make the image responsive by adjusting either the width or height while maintaining the aspect ratio.
-Full Name
-Display your full name.
-Attribute: data-testid="fullName"
-Job Title
-Display your current job title or desired job title.
-Attribute: data-testid="jobTitle"
-Short Bio
-Include a short bio about yourself (50-100 words).
-Attribute: data-testid="shortBio"
-Current Location
-Display your current city and country.
-Attribute: data-testid="currentLocation"
-Email Address
-Add your professional email address.
-Attribute: data-testid="emailAddress"
-Social Links
-Add links to your professional social profiles (e.g., LinkedIn, GitHub, Twitter).
-Attribute: data-testid="socialLinks"
-Current Time in UTC
-Display the current time in UTC format.
-Attribute: data-testid="currentTimeUTC"
-
-        -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HNG Profile Card</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/78685a7038.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
 		<div class="container">
-			<div class="profile">
+			<article class="profile" data-testid="test-profile-card">
 				<div class="image">
-					<img src="assets/profile.png" data-testid="profilePicture" alt="" />
+					<figure>
+						<img src="assets/profile.png" data-testid="test-user-avatar" alt="" />
+					</figure>
 				</div>
 
 				<div class="data">
-					<p class="name" data-testid="fullName">
+					<p class="name" data-testid="test-user-name">
 						Oluwasemilore Omotade-Michaels
 					</p>
 					<p class="job" data-testid="jobTitle">Software Engineer</p>
-					<div class="links">
-						<a href="https://x.com/shemigam1" data-testid="socialLinks">
+					<div class="links" data-testid="test-user-social-links">
+						<a href="https://x.com/shemigam1" data-testid="test-user-social-x">
 							<i class="fa-brands fa-x-twitter"></i
 						></a>
-						<a href="https://github.com/shemigam1" data-testid="socialLinks"
+						<a href="https://github.com/shemigam1" data-testid="test-user-social-github"
 							><i class="fa-brands fa-square-github"></i
 						></a>
 					</div>
 				</div>
-			</div>
+			</article>
 
 			<div class="bio">
 				<div class="location">
@@ -77,18 +49,37 @@ Attribute: data-testid="currentTimeUTC"
 						><i class="fa-solid fa-location-dot"></i> Lagos, NG</span
 					>
 					<span>
-						<span data-testid="currentTimeUTC"></span>
+						<span data-testid="test-user-time"></span>
 						<i class="fa-solid fa-clock"></i
 					></span>
 				</div>
 
 				<div class="">
-					<p data-testid="shortBio">
+					<p data-testid="test-user-bio">
 						I am a dedicated software developer specializing in frontend
 						development. Passionate about creating visually appealing and
 						intuitive user experiences, I continuously hones my skills and keep
 						up with the latest trends in the industry.
 					</p>
+
+					<section>
+            <h3>Hobbies</h3>
+            <ul data-testid="test-user-hobbies">
+              <li>Coding</li>
+              <li>Web Design</li>
+              <li>Open Source</li>
+              <li>Tech Blogs</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Dislikes</h3>
+            <ul data-testid="test-user-dislikes">
+              <li>Bugs</li>
+              <li>Poor UX</li>
+              <li>Legacy Code</li>
+            </ul>
+          </section>
 				</div>
 			</div>
 		</div>
@@ -99,5 +90,79 @@ Attribute: data-testid="currentTimeUTC"
 				>
 			</p>
 		</footer>
-	</body>
+
+  <!-- <body>
+    <div class="container">
+      <article data-testid="test-profile-card">
+        <div class="profile">
+          <figure>
+            <div class="image">
+              <img
+                src="https://i.pravatar.cc/200?img=12"
+                alt="Oluwasemilore Omotade-Michaels profile picture"
+                data-testid="test-user-avatar"
+              />
+            </div>
+          </figure>
+
+          <div class="data">
+            <h2 data-testid="test-user-name">Oluwasemilore Omotade-Michaels</h2>
+            <p class="job-title">Software Engineer</p>
+            <nav data-testid="test-user-social-links">
+              <ul>
+                <li>
+                  <a
+                    href="https://x.com/shemigam1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-twitter"
+                    aria-label="Twitter"
+                  >
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/shemigam1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-github"
+                    aria-label="GitHub"
+                  >
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="bio">
+          <div class="location">
+            <span> <i class="fa-solid fa-location-dot"></i> Lagos, NG </span>
+            <span>
+              <i class="fa-solid fa-clock"></i>
+              <span data-testid="test-user-time">0</span> ms
+            </span>
+          </div>
+
+          <p data-testid="test-user-bio">
+            I am a dedicated software developer specializing in frontend
+            development. Passionate about creating visually appealing and
+            intuitive user experiences, I continuously hone my skills and keep
+            up with the latest trends in the industry.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <footer>
+      <p>
+        contact me @
+        <span class="email" data-testid="emailAddress"
+          >semiloreomotade@gmail.com</span
+        >
+      </p>
+    </footer>
+  </body> -->
 </html>
